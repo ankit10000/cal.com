@@ -16,31 +16,29 @@ ENV NODE_ENV="production"
 # Throw-away build stage to reduce size of final image
 FROM base as build
 
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install -y build-essential openssl pkg-config python-is-python3
-
-
+# copy all required files from the monorepo
 COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json git-init.sh git-setup.sh ./
 COPY /.yarn ./.yarn
 COPY /apps/api ./apps/api
 COPY /packages ./packages
 COPY /apps/web ./apps/web
 
-# Install node modules
-RUN yarn config set httpTimeout 1200000 && \ 
+# Install node modules and dependencies, prune unneeded deps, then build
+RUN set -eux; \
+    apt-get update -qq && \
+    apt-get install -y build-essential openssl pkg-config python-is-python3 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives && \
+    yarn config set httpTimeout 1200000 && \
     npx turbo prune --scope=@calcom/web --docker && \
     npx turbo prune --scope=@calcom/api --docker && \
-    yarn install
+    yarn install && \
+    yarn turbo run build --filter=@calcom/api
 
 
-
-# Build application
-RUN yarn turbo run build --filter=@calcom/api
-
-
-# Final stage for app image
+# Final stage
 FROM base
+WORKDIR /app
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
@@ -48,8 +46,16 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built application
-COPY --from=build /app /app
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/apps/api/package.json ./apps/api/package.json
+COPY --from=build /app/apps/api/.next ./apps/api/.next
+COPY --from=build /app/apps/api/.turbo ./apps/api/.turbo
+COPY --from=build /app/turbo.json ./turbo.json
+COPY --from=build /app/yarn.lock ./yarn.lock
 
-# Start the server by default, this can be overwritten at runtime
+# Expose port 3002
 EXPOSE 3002
+
+# Start cmd, called when docker image is mounted
 CMD [ "yarn", "start-api"]
