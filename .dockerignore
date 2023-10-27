@@ -1,0 +1,433 @@
+# flyctl launch added from .gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# .env file
+**/.env
+!**/packages/prisma/.env
+
+# dependencies
+**/node_modules
+**/.pnp
+**/.pnp.js
+
+# testing
+**/coverage
+test-results
+**/**/playwright/videos
+**/**/playwright/screenshots
+**/**/playwright/artifacts
+**/**/playwright/results
+**/**/playwright/reports/*
+
+# next.js
+**/.next
+**/out
+**/build
+
+# misc
+**/.DS_Store
+**/*.pem
+
+# debug
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+
+# local env files
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/.env.*
+!**/.env.example
+!**/.env.appStore.example
+
+# vercel
+**/.vercel
+
+# Webstorm
+**/.idea
+
+### VisualStudioCode template
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+!**/.vscode/extensions.json
+**/*.code-workspace
+
+# Local History for Visual Studio Code
+**/.history
+
+# Typescript
+**/tsconfig.tsbuildinfo
+
+# turbo
+**/.turbo
+
+# Prisma generated files
+**/packages/prisma/zod/*.ts
+**/packages/prisma/enums
+
+# Builds
+**/dist
+
+# Linting
+**/lint-results
+
+#Storybook
+**/apps/storybook/build-storybook.log
+
+# Snaplet
+**/.snaplet/snapshots
+**/.snaplet/structure.d.ts
+
+# Submodules
+**/.gitmodules
+**/apps/website
+**/apps/console
+**/apps/auth
+
+# Yarn Modern
+**/.pnp.*
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/plugins
+!**/.yarn/releases
+!**/.yarn/sdks
+!**/.yarn/versions
+
+# flyctl launch added from .husky/_/.gitignore
+.husky/_/**/*
+
+# flyctl launch added from .yarn/cache/.gitignore
+.yarn/cache/.gitignore
+.yarn/cache/**/*.flock
+.yarn/cache/**/*.tmp
+
+# flyctl launch added from apps/api/.gitignore
+# .env file
+apps/api/**/.env
+
+# dependencies
+apps/api/**/node_modules
+apps/api/**/.pnp
+apps/api/**/.pnp.js
+
+# testing
+apps/api/**/coverage
+apps/api/test-results
+apps/api/**/playwright/videos
+apps/api/**/playwright/screenshots
+apps/api/**/playwright/artifacts
+apps/api/**/playwright/results
+apps/api/**/playwright/reports/*
+
+# next.js
+apps/api/**/.next
+apps/api/**/out
+apps/api/**/build
+
+# misc
+apps/api/**/.DS_Store
+apps/api/**/*.pem
+
+# debug
+apps/api/**/npm-debug.log*
+apps/api/**/yarn-debug.log*
+apps/api/**/yarn-error.log*
+apps/api/**/.pnpm-debug.log*
+
+# local env files
+apps/api/**/.env.local
+apps/api/**/.env.development.local
+apps/api/**/.env.test.local
+apps/api/**/.env.production.local
+apps/api/**/.env.*
+!apps/api/**/.env.example
+
+# vercel
+apps/api/**/.vercel
+
+# Webstorm
+apps/api/**/.idea
+
+### VisualStudioCode template
+apps/api/**/.vscode
+apps/api/**/.vscode/*
+!apps/api/**/.vscode/settings.json
+!apps/api/**/.vscode/tasks.json
+!apps/api/**/.vscode/launch.json
+!apps/api/**/.vscode/extensions.json
+apps/api/**/*.code-workspace
+
+# Local History for Visual Studio Code
+apps/api/**/.history
+
+# Typescript
+apps/api/**/tsconfig.tsbuildinfo
+
+# turbo
+apps/api/**/.turbo
+
+# Prisma-Zod
+apps/api/**/packages/prisma/zod/*.ts
+
+# Builds
+apps/api/**/dist
+
+# Linting
+apps/api/**/lint-results
+
+# Yarn
+apps/api/**/yarn-error.log
+
+apps/api/**/.turbo
+apps/api/**/.next
+apps/api/**/.husky
+apps/api/**/.vscode
+apps/api/**/.env
+
+# flyctl launch added from apps/storybook/.gitignore
+# Logs
+apps/storybook/**/logs
+apps/storybook/**/*.log
+apps/storybook/**/npm-debug.log*
+apps/storybook/**/yarn-debug.log*
+apps/storybook/**/yarn-error.log*
+apps/storybook/**/pnpm-debug.log*
+apps/storybook/**/lerna-debug.log*
+
+apps/storybook/**/node_modules
+apps/storybook/**/storybook-static
+apps/storybook/**/dist
+apps/storybook/**/dist-ssr
+apps/storybook/**/*.local
+
+# Editor directories and files
+apps/storybook/**/.vscode/*
+!apps/storybook/**/.vscode/extensions.json
+apps/storybook/**/.idea
+apps/storybook/**/.DS_Store
+apps/storybook/**/*.suo
+apps/storybook/**/*.ntvs*
+apps/storybook/**/*.njsproj
+apps/storybook/**/*.sln
+apps/storybook/**/*.sw?
+
+# flyctl launch added from apps/swagger/.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+apps/swagger/node_modules
+apps/swagger/.pnp
+apps/swagger/**/.pnp.js
+
+# testing
+apps/swagger/coverage
+
+# next.js
+apps/swagger/.next
+apps/swagger/out
+
+# production
+apps/swagger/build
+
+# misc
+apps/swagger/**/.DS_Store
+apps/swagger/**/*.pem
+
+# debug
+apps/swagger/**/npm-debug.log*
+apps/swagger/**/yarn-debug.log*
+apps/swagger/**/yarn-error.log*
+
+# local env files
+apps/swagger/**/.env.local
+apps/swagger/**/.env.development.local
+apps/swagger/**/.env.test.local
+apps/swagger/**/.env.production.local
+
+# vercel
+apps/swagger/**/.vercel
+
+# flyctl launch added from apps/web/.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# .env file
+apps/web/**/.env
+
+# dependencies
+apps/web/node_modules
+apps/web/.pnp
+apps/web/**/.pnp.js
+apps/web/.yarn
+
+# testing
+apps/web/coverage
+apps/web/**/.nyc_output
+apps/web/**/playwright/videos
+apps/web/**/playwright/screenshots
+apps/web/**/playwright/artifacts
+apps/web/**/playwright/results
+apps/web/**/playwright/reports/*
+
+# next.js
+apps/web/.next
+apps/web/out
+apps/web/**/next-env.d.ts
+
+# production
+apps/web/build
+
+# misc
+apps/web/**/.DS_Store
+apps/web/**/*.pem
+
+# debug
+apps/web/**/npm-debug.log*
+apps/web/**/yarn-debug.log*
+apps/web/**/yarn-error.log*
+
+# local env files
+apps/web/**/.env.local
+apps/web/**/.env.development.local
+apps/web/**/.env.test.local
+apps/web/**/.env.production.local
+apps/web/**/.env.*
+!apps/web/**/.env.example
+
+# vercel
+apps/web/**/.vercel
+
+# Webstorm
+apps/web/**/.idea
+
+### VisualStudioCode template
+apps/web/**/.vscode/*
+!apps/web/**/.vscode/settings.json
+!apps/web/**/.vscode/tasks.json
+!apps/web/**/.vscode/launch.json
+!apps/web/**/.vscode/extensions.json
+apps/web/**/*.code-workspace
+
+# Local History for Visual Studio Code
+apps/web/**/.history
+
+# Typescript
+apps/web/**/tsconfig.tsbuildinfo
+
+# Autogenerated embed content
+apps/web/**/public/embed
+
+# Copied app-store images
+apps/web/**/public/app-store
+
+# flyctl launch added from node_modules/digest-fetch/.gitignore
+!node_modules/digest-fetch/**/.gitignore
+node_modules/digest-fetch/**/node_modules
+node_modules/digest-fetch/**/packing
+
+
+# flyctl launch added from node_modules/i18n-unused/.gitignore
+node_modules/i18n-unused/**/.DS_STORE
+node_modules/i18n-unused/**/node_modules
+node_modules/i18n-unused/**/dist
+node_modules/i18n-unused/**/.yarn/*
+!node_modules/i18n-unused/**/.yarn/cache
+!node_modules/i18n-unused/**/.yarn/releases
+!node_modules/i18n-unused/**/.yarn/plugins
+node_modules/i18n-unused/**/*.log
+node_modules/i18n-unused/**/.idea
+
+# flyctl launch added from node_modules/minipass-sized/.gitignore
+# ignore most things, include some others
+node_modules/minipass-sized/*
+node_modules/minipass-sized/.*
+
+!node_modules/minipass-sized/**/bin
+!node_modules/minipass-sized/**/lib
+!node_modules/minipass-sized/**/docs
+!node_modules/minipass-sized/**/package.json
+!node_modules/minipass-sized/**/package-lock.json
+!node_modules/minipass-sized/**/README.md
+!node_modules/minipass-sized/**/CONTRIBUTING.md
+!node_modules/minipass-sized/**/LICENSE
+!node_modules/minipass-sized/**/CHANGELOG.md
+!node_modules/minipass-sized/**/example
+!node_modules/minipass-sized/**/scripts
+!node_modules/minipass-sized/**/tap-snapshots
+!node_modules/minipass-sized/**/test
+!node_modules/minipass-sized/**/.travis.yml
+!node_modules/minipass-sized/**/.gitignore
+!node_modules/minipass-sized/**/.gitattributes
+!node_modules/minipass-sized/**/coverage-map.js
+!node_modules/minipass-sized/**/index.js
+
+# flyctl launch added from node_modules/secp256k1/src/secp256k1/.gitignore
+node_modules/secp256k1/src/secp256k1/**/bench_inv
+node_modules/secp256k1/src/secp256k1/**/bench_ecdh
+node_modules/secp256k1/src/secp256k1/**/bench_ecmult
+node_modules/secp256k1/src/secp256k1/**/bench_sign
+node_modules/secp256k1/src/secp256k1/**/bench_verify
+node_modules/secp256k1/src/secp256k1/**/bench_schnorr_verify
+node_modules/secp256k1/src/secp256k1/**/bench_recover
+node_modules/secp256k1/src/secp256k1/**/bench_internal
+node_modules/secp256k1/src/secp256k1/**/tests
+node_modules/secp256k1/src/secp256k1/**/exhaustive_tests
+node_modules/secp256k1/src/secp256k1/**/gen_context
+node_modules/secp256k1/src/secp256k1/**/*.exe
+node_modules/secp256k1/src/secp256k1/**/*.so
+node_modules/secp256k1/src/secp256k1/**/*.a
+!node_modules/secp256k1/src/secp256k1/**/.gitignore
+
+node_modules/secp256k1/src/secp256k1/**/Makefile
+node_modules/secp256k1/src/secp256k1/**/configure
+node_modules/secp256k1/src/secp256k1/**/.libs
+node_modules/secp256k1/src/secp256k1/**/Makefile.in
+node_modules/secp256k1/src/secp256k1/**/aclocal.m4
+node_modules/secp256k1/src/secp256k1/**/autom4te.cache
+node_modules/secp256k1/src/secp256k1/**/config.log
+node_modules/secp256k1/src/secp256k1/**/config.status
+node_modules/secp256k1/src/secp256k1/**/*.tar.gz
+node_modules/secp256k1/src/secp256k1/**/*.la
+node_modules/secp256k1/src/secp256k1/**/libtool
+node_modules/secp256k1/src/secp256k1/**/.deps
+node_modules/secp256k1/src/secp256k1/**/.dirstamp
+node_modules/secp256k1/src/secp256k1/**/*.lo
+node_modules/secp256k1/src/secp256k1/**/*.o
+node_modules/secp256k1/src/secp256k1/**/*~
+node_modules/secp256k1/src/secp256k1/**/src/libsecp256k1-config.h
+node_modules/secp256k1/src/secp256k1/**/src/libsecp256k1-config.h.in
+node_modules/secp256k1/src/secp256k1/**/src/ecmult_static_context.h
+node_modules/secp256k1/src/secp256k1/**/build-aux/config.guess
+node_modules/secp256k1/src/secp256k1/**/build-aux/config.sub
+node_modules/secp256k1/src/secp256k1/**/build-aux/depcomp
+node_modules/secp256k1/src/secp256k1/**/build-aux/install-sh
+node_modules/secp256k1/src/secp256k1/**/build-aux/ltmain.sh
+node_modules/secp256k1/src/secp256k1/**/build-aux/m4/libtool.m4
+node_modules/secp256k1/src/secp256k1/**/build-aux/m4/lt~obsolete.m4
+node_modules/secp256k1/src/secp256k1/**/build-aux/m4/ltoptions.m4
+node_modules/secp256k1/src/secp256k1/**/build-aux/m4/ltsugar.m4
+node_modules/secp256k1/src/secp256k1/**/build-aux/m4/ltversion.m4
+node_modules/secp256k1/src/secp256k1/**/build-aux/missing
+node_modules/secp256k1/src/secp256k1/**/build-aux/compile
+node_modules/secp256k1/src/secp256k1/**/build-aux/test-driver
+node_modules/secp256k1/src/secp256k1/**/src/stamp-h1
+node_modules/secp256k1/src/secp256k1/**/libsecp256k1.pc
+
+# flyctl launch added from node_modules/tailwindcss/stubs/.gitignore
+!node_modules/tailwindcss/stubs/**/*
+
+# flyctl launch added from packages/app-store-cli/.gitignore
+packages/app-store-cli/**/node_modules
+packages/app-store-cli/**/dist
+
+# flyctl launch added from packages/embeds/embed-core/.gitignore
+packages/embeds/embed-core/**/src/tailwind.generated.css
+
+# flyctl launch added from packages/embeds/embed-react/.gitignore
+packages/embeds/embed-react/**/.turbo
+packages/embeds/embed-react/**/dist
+fly.toml

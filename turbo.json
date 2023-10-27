@@ -45,6 +45,10 @@
       "cache": false,
       "dependsOn": []
     },
+    "@calcom/api#start": {
+      "cache": false,
+      "dependsOn": []
+    },
     "@calcom/ai#build": {
       "env": [
         "FRONTEND_URL",
