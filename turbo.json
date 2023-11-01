@@ -17,6 +17,9 @@
     "@calcom/prisma#db-up": {
       "cache": false
     },
+    "@calcom/infra#deploy-infra": {
+      "cache": false
+    },
     "@calcom/prisma#dx": {
       "cache": false,
       "dependsOn": ["@calcom/prisma#db-migrate"]
@@ -103,6 +106,9 @@
     "deploy": {
       "cache": false,
       "dependsOn": ["@calcom/web#build"]
+    },
+    "deploy-infra": {
+      "cache": false
     },
     "clean": {
       "cache": false,

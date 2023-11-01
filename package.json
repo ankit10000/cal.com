@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
+    "infra/*",
     "apps/*",
     "packages/*",
     "packages/embeds/*",
@@ -30,6 +31,7 @@
     "db-seed": "turbo run db-seed",
     "db-studio": "yarn prisma studio",
     "deploy": "turbo run deploy",
+    "deploy-infra": "turbo run deploy-infra",
     "dev:all": "turbo run dev --scope=\"@calcom/web\" --scope=\"@calcom/website\" --scope=\"@calcom/console\"",
     "dev:ai": "turbo run dev --scope=\"@calcom/web\" --scope=\"@calcom/api\" --scope=\"@calcom/ai\"",
     "dev:api": "turbo run dev --scope=\"@calcom/web\" --scope=\"@calcom/api\"",
